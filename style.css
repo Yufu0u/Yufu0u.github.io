@@ -2,15 +2,16 @@
 
 /* CSS 变量：改这里的颜色，全站一起变 */
 :root {
-    --bg: #f6f8fa;          /* 页面背景 */
-    --card: #ffffff;        /* 卡片背景 */
-    --text: #1f2328;        /* 正文颜色 */
-    --muted: #656d76;       /* 次要文字 */
-    --accent: #0969da;      /* 主题色（链接/按钮） */
-    --accent-soft: #ddf4ff; /* 主题色浅底 */
-    --green: #1a7f37;       /* "进行中"徽章 */
-    --gray: #8b949e;        /* "规划中"徽章 */
-    --border: #d0d7de;      /* 边框 */
+    color-scheme: dark;     /* 让滚动条、表单控件也跟随深色 */
+    --bg: #0d1117;          /* 页面背景（GitHub 深色同款） */
+    --card: #161b22;        /* 卡片背景 */
+    --text: #e6edf3;        /* 正文颜色 */
+    --muted: #8b949e;       /* 次要文字 */
+    --accent: #58a6ff;      /* 主题色（链接/按钮） */
+    --accent-soft: rgba(88,166,255,.15); /* 主题色浅底 */
+    --green: #3fb950;       /* "进行中"徽章 */
+    --gray: #6e7681;        /* "规划中"徽章 */
+    --border: #30363d;      /* 边框 */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -84,7 +85,7 @@ body {
 }
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,.5);
 }
 .card h3 { margin: 8px 0 6px; font-size: 1.05rem; }
 .card p { color: var(--muted); font-size: .92rem; }
@@ -126,7 +127,7 @@ body {
 .post p, .post li { margin-bottom: 8px; }
 .post ul { padding-left: 22px; margin-bottom: 8px; }
 .post code {
-    background: #eff1f3;
+    background: #21262d;
     padding: 2px 6px;
     border-radius: 4px;
     font-family: Consolas, monospace;
