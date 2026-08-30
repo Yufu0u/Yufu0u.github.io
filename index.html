@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- 这是网站的首页。HTML 负责"结构"：一个个区块就像搭积木 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport 这行让手机访问时能正常缩放，删了手机上会很小 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yufu0u 的学习小站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== 顶部导航栏（三个页面共用同样的结构） ===== -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">Yufu0u.dev</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">首页</a>
+            <a href="blog.html">学习日志</a>
+            <a href="about.html">关于我</a>
+        </div>
+    </nav>
+
+    <!-- ===== 主视觉区：第一眼看到的部分 ===== -->
+    <header class="hero">
+        <h1> <span class="highlight">Yufu0u</span> </h1>
+        <p class="hero-sub">
+            一个普通人......
+        </p>
+        <p class="hero-desc">
+            这里是我的个人学习日志，记录学习过程
+        </p>
+        <!-- TODO：把链接里的"你的GitHub用户名"全部替换成你自己的 -->
+        <a class="btn" href="https://github.com/Yufu0u">GitHub 主页 →</a>
+    </header>
+
+    <!-- ===== 项目导航卡片 ===== -->
+    <section class="section">
+        <h2>我</h2>
+        <div class="cards">
+
+            <a class="card" href="https://github.com/Yufu0u/learning-notes">
+                <span class="badge doing">进行中</span>
+                <h3>learning-notes</h3>
+                <p>学习计划、进度打卡</p>
+            </a>
+
+            <a class="card" href="blog.html">
+                <span class="badge doing">进行中</span>
+                <h3>个人网站</h3>
+                <p>就是你正在看的这个网站GitHub Pages + giscus 评论。</p>
+            </a>
+
+            <a class="card" href="#">
+                <span class="badge todo">规划中</span>
+                <h3></h3>
+                <p></p>
+            </a>
+
+            <a class="card" href="#">
+                <span class="badge todo">规划中</span>
+                <h3></h3>
+                <p></p>
+            </a>
+
+            <a class="card" href="#">
+                <span class="badge todo">规划中</span>
+                <h3></h3>
+                <p></p>
+            </a>
+
+            <a class="card" href="#">
+                <span class="badge todo">规划中</span>
+                <h3></h3>
+                <p> </p>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>由 GitHub Pages 托管 · 用 HTML/CSS 手写 · 评论功能来自 giscus</p>
+    </footer>
+
+</body>
+</html>

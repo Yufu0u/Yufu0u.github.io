@@ -1,0 +1,155 @@
+/* ===== 全站样式表：HTML 是骨架，CSS 是皮肤 ===== */
+
+/* CSS 变量：改这里的颜色，全站一起变 */
+:root {
+    --bg: #f6f8fa;          /* 页面背景 */
+    --card: #ffffff;        /* 卡片背景 */
+    --text: #1f2328;        /* 正文颜色 */
+    --muted: #656d76;       /* 次要文字 */
+    --accent: #0969da;      /* 主题色（链接/按钮） */
+    --accent-soft: #ddf4ff; /* 主题色浅底 */
+    --green: #1a7f37;       /* "进行中"徽章 */
+    --gray: #8b949e;        /* "规划中"徽章 */
+    --border: #d0d7de;      /* 边框 */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+}
+
+/* ===== 导航栏 ===== */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px 24px;
+}
+.nav-logo { font-weight: bold; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+.nav-links a {
+    margin-left: 20px;
+    color: var(--muted);
+    text-decoration: none;
+    padding-bottom: 4px;
+}
+.nav-links a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+.nav-links a:hover { color: var(--accent); }
+
+/* ===== 首页主视觉 ===== */
+.hero {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 24px 40px;
+}
+.hero h1 { font-size: 2rem; margin-bottom: 12px; }
+.highlight { color: var(--accent); }
+.hero-sub { font-size: 1.05rem; color: var(--muted); margin-bottom: 12px; }
+.hero-desc { margin-bottom: 24px; }
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity .2s;
+}
+.btn:hover { opacity: .85; }
+
+/* ===== 通用区块 ===== */
+.section { max-width: 900px; margin: 24px auto; padding: 0 24px 40px; }
+.section h2 { margin-bottom: 20px; font-size: 1.4rem; }
+
+/* ===== 项目卡片 ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* 自动换行响应式 */
+    gap: 16px;
+}
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform .15s, box-shadow .15s;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+.card h3 { margin: 8px 0 6px; font-size: 1.05rem; }
+.card p { color: var(--muted); font-size: .92rem; }
+
+.badge {
+    display: inline-block;
+    font-size: .75rem;
+    padding: 2px 10px;
+    border-radius: 999px;
+    color: #fff;
+}
+.badge.doing { background: var(--green); }
+.badge.todo  { background: var(--gray); }
+
+/* ===== 日志页 ===== */
+.page { max-width: 760px; margin: 30px auto; padding: 0 24px 60px; }
+.page h1 { margin-bottom: 8px; }
+.page-sub { color: var(--muted); margin-bottom: 32px; }
+
+.post {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+}
+.post-meta { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+.date {
+    font-size: .85rem;
+    color: var(--muted);
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 999px;
+}
+.tag { font-size: .85rem; color: var(--muted); }
+.post h2 { font-size: 1.3rem; margin-bottom: 14px; }
+.post h3 { font-size: 1.05rem; margin: 18px 0 8px; }
+.post p, .post li { margin-bottom: 8px; }
+.post ul { padding-left: 22px; margin-bottom: 8px; }
+.post code {
+    background: #eff1f3;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    font-size: .9em;
+}
+.post a { color: var(--accent); }
+
+/* ===== 评论区 ===== */
+.comments { margin-top: 40px; }
+.comments h2 { margin-bottom: 16px; }
+.comments-hint {
+    color: var(--muted);
+    background: var(--card);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===== 页脚 ===== */
+.footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+    padding: 30px 0 40px;
+}

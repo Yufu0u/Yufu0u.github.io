@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- 学习日志页：每周日在最上面加一篇文章，往下越旧 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习日志 | Yufu0u</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">Yufu0u.dev</a>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="blog.html" class="active">学习日志</a>
+            <a href="about.html">关于我</a>
+        </div>
+    </nav>
+
+    <main class="page">
+        <h1> 学习日志</h1>
+        <p class="page-sub">每周一篇。</p>
+
+        <!-- ===== 文章模板：以后每周复制这段到最上面，改日期和内容即可 =====
+        <article class="post">
+            <div class="post-meta"><span class="date">2026-XX-XX</span><span class="tag">第 N 周</span></div>
+            <h2>标题</h2>
+            <p>正文……</p>
+            <h3>小标题</h3>
+            <ul><li>要点</li></ul>
+        </article>
+        ==================================================================== -->
+
+        <!-- 第一篇：启动周（内容是真实发生的，可以按心情改写） -->
+        <article class="post">
+            <div class="post-meta"><span class="date">2026-08-30</span><span class="tag">第 0 周</span></div>
+            <h2></h2>
+            <p></p>
+    
+            <h3>2026-08-30</h3>
+           <p>
+           今天接SSH,一直报 <code>Permission denied</code>，排查半天发现是用户名大小写写错...
+            </p>
+
+        <!-- ===== giscus 评论组件（上线前需完成一次配置） =====
+             步骤：
+             1. 仓库 Settings → General → Features → 勾选 Discussions
+             2. 安装 giscus App：https://github.com/apps/giscus （选这个仓库授权）
+             3. 打开 https://giscus.app/zh-CN ，按页面提示填写：
+                - 仓库：你的GitHub用户名/你的GitHub用户名.github.io
+                - 映射方式：pathname（讨论标题包含页面路径）
+                - Discussion 分类：Announcements（推荐，别人只能回复不能开新帖）
+             4. 复制 giscus.app 生成的 <script ...>...</script> 整段代码，
+                取消下面注释并粘贴进去（替换掉 "配置完成前 giscus 暂未启用" 那行）
+        -->
+        <div class="comments">
+            <h2> 留言板</h2>
+            <!-- 配置完成前 giscus 暂未启用：请按上方注释操作，然后把生成的脚本粘贴到这里
+            <script src="https://giscus.app/client.js"
+                    data-repo="你的GitHub用户名/你的GitHub用户名.github.io"
+                    data-repo-id="（giscus.app 会给你）"
+                    data-category="Announcements"
+                    data-category-id="（giscus.app 会给你）"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="top"
+                    data-theme="preferred_color_scheme"
+                    data-lang="zh-CN"
+                    data-loading="lazy"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+            -->
+            <p class="comments-hint">评论区配置中，敬请期待（需要 GitHub 账号登录后留言）</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>由 GitHub Pages 托管 · 用 HTML/CSS 手写 · 评论功能来自 giscus</p>
+    </footer>
+
+</body>
+</html>
