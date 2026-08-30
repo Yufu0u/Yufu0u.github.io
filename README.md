@@ -1,10 +1,10 @@
-# UmeHanami 的个人学习网站
+# Yufu0u 的个人学习网站
 
-我的个人学习日志 + 作品集，托管在 GitHub Pages 上。
+个人学习日志 + 作品集，托管在 GitHub Pages 上。
 
-- 在线地址：https://你的GitHub用户名.github.io
+- 在线地址：https://Yufu0u.github.io
 - 技术：HTML / CSS 手写，评论用 giscus（基于 GitHub Discussions）
-- 内容：每周一篇学习日志，记录实验室主线（Linux → ROS2 → YOLO → 机械臂）的进展
+- 内容：每周一篇学习日志
 
 ## 首次发布步骤
 
