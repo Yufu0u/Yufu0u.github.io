@@ -5,70 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学习日志 | Yufu0u</title>
+    <meta name="description" content="Yufu0u 的每周学习日志：学习计划、进度打卡和踩坑记录，最新的在最上面。">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yufu0u.dev">
+    <meta property="og:title" content="学习日志 | Yufu0u">
+    <meta property="og:description" content="每周一篇，记录学习计划、进度和踩过的坑。">
+    <meta property="og:url" content="https://yufu0u.github.io/blog.html">
+    <meta name="twitter:card" content="summary">
 </head>
 <body>
 
+    <a class="skip-link" href="#main">跳到正文</a>
+
     <nav class="nav">
-        <a href="index.html" class="nav-logo">Yufu0u.dev</a>
-        <div class="nav-links">
-            <a href="index.html">首页</a>
-            <a href="blog.html" class="active">学习日志</a>
-            <a href="about.html">关于我</a>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Yufu0u.dev</a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="blog.html" class="active" aria-current="page">学习日志</a>
+                <a href="about.html">关于我</a>
+            </div>
         </div>
     </nav>
 
-    <main class="page">
-        <h1> 学习日志</h1>
-        <p class="page-sub">每周一篇。</p>
+    <main id="main">
+        <div class="page">
+            <h1>学习日志</h1>
+            <p class="page-sub">每周一篇，最新的在最上面。</p>
 
-        <!-- ===== 文章模板=====
-        <article class="post">
-            <div class="post-meta"><span class="date">2026-XX-XX</span><span class="tag">第 N 周</span></div>
-            <h2>标题</h2>
-            <p>正文……</p>
-            <h3>小标题</h3>
-            <ul><li>要点</li></ul>
-        </article>
-        ==================================================================== -->
+            <!-- ===== 文章模板：新的一篇复制这一段，放到最上面 =====
+            <article class="post">
+                <div class="post-meta">
+                    <span class="date">2026-XX-XX</span>
+                    <span class="tag">第 N 周</span>
+                </div>
+                <h2>文章标题</h2>
+                <p>正文……</p>
+                <h3>小标题</h3>
+                <ul><li>要点</li></ul>
+            </article>
+            ================================================================ -->
 
-        <!-- 第一篇 -->
-        <article class="post">
-            <div class="post-meta"><span class="date">2026-08-30</span><span class="tag">第 0 周</span></div>
-            <h3>2026-08-30</h3>
-           <p>
-           今天接SSH,一直报 <code>Permission denied</code>，排查半天发现是用户名大小写写错... </p>
-        </article>
+            <!-- 最新的一篇放最上面 -->
+            <article class="post">
+                <div class="post-meta">
+                    <span class="date">2026-09-06</span>
+                    <span class="tag">第 1 周</span>
+                </div>
+                <h2>试了试 GPT-6</h2>
+                <p>试了试 GPT-6，AI 的进化速度真可怕……</p>
+            </article>
 
-        <article class="post">
-            <div class="post-meta"><span class="date">2026-09-06</span><span class="tag">第 1 周</span></div>
-            <h3>2026-09-06</h3>
-            <p>试了试gpt6,AI进化速度真可怕...</p>
-        </article>
+            <article class="post">
+                <div class="post-meta">
+                    <span class="date">2026-08-30</span>
+                    <span class="tag">第 0 周</span>
+                </div>
+                <h2>SSH 连不上，原来是用户名写错了</h2>
+                <p>今天接 SSH，一直报 <code>Permission denied</code>，排查半天发现是用户名大小写写错了……</p>
+            </article>
 
-        <div class="comments">
-            <h2> 留言板</h2>
-            <!-- giscus -->
-            <script src="https://giscus.app/client.js"
-                    data-repo="Yufu0u/Yufu0u.github.io"
-                    data-repo-id="R_kgDOUIkBjw"
-                    data-category="General"
-                    data-category-id="DIC_kwDOUIkBj84DEgXz"
-                    data-mapping="pathname"
-                    data-strict="0"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="bottom"
-                    data-theme="transparent_dark"
-                    data-lang="zh-CN"
-                    crossorigin="anonymous"
-                    async>
-            </script>
+            <div class="comments">
+                <h2>留言板</h2>
+                <!-- giscus -->
+                <script src="https://giscus.app/client.js"
+                        data-repo="Yufu0u/Yufu0u.github.io"
+                        data-repo-id="R_kgDOUIkBjw"
+                        data-category="General"
+                        data-category-id="DIC_kwDOUIkBj84DEgXz"
+                        data-mapping="pathname"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="bottom"
+                        data-theme="transparent_dark"
+                        data-lang="zh-CN"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </div>
         </div>
     </main>
 
     <footer class="footer">
-        <p>由 GitHub Pages 托管 · 用 HTML/CSS 手写 · 评论功能来自 giscus</p>
+        <p>由 GitHub Pages 托管 · 用 HTML / CSS 手写 · 评论来自 giscus</p>
     </footer>
 
 </body>

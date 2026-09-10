@@ -12,83 +12,157 @@
     --green: #3fb950;       /* "进行中"徽章 */
     --gray: #6e7681;        /* "规划中"徽章 */
     --border: #30363d;      /* 边框 */
+
+    --radius: 12px;                        /* 圆角统一在这里改 */
+    --page: 900px;                         /* 首页宽度 */
+    --reading: 760px;                      /* 日志页宽度：窄一点好读 */
+    --shadow: 0 8px 24px rgba(1,4,9,.6);   /* 卡片悬浮阴影 */
+    --mono: Consolas, "Cascadia Mono", monospace;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
     font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* ===== 导航栏 ===== */
+/* 用键盘 Tab 浏览时的焦点框，鼠标点击不会出现 */
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* 给键盘和读屏用户的「跳到正文」，平时藏在屏幕外 */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--accent);
+    color: #0d1117;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 0 0 8px 0;
+    text-decoration: none;
+}
+.skip-link:focus { left: 0; z-index: 100; }
+
+/* ===== 导航栏：吸顶，滚动时保持可见 ===== */
 .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(13,17,23,.82);
+    backdrop-filter: blur(10px);           /* 背后的内容虚化 */
+    border-bottom: 1px solid var(--border);
+}
+.nav-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
+    gap: 16px;
+    max-width: var(--page);
     margin: 0 auto;
-    padding: 18px 24px;
+    padding: 12px 24px;
 }
-.nav-logo { font-weight: bold; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text);
+    text-decoration: none;
+}
+.nav-links { display: flex; gap: 4px; }
 .nav-links a {
-    margin-left: 20px;
     color: var(--muted);
     text-decoration: none;
-    padding-bottom: 4px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: color .15s, background .15s;
 }
-.nav-links a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover { color: var(--text); background: rgba(255,255,255,.06); }
+.nav-links a.active { color: var(--accent); background: var(--accent-soft); }
 
 /* ===== 首页主视觉 ===== */
 .hero {
-    max-width: 900px;
-    margin: 40px auto 0;
-    padding: 0 24px 40px;
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 72px 24px 56px;
 }
-.hero h1 { font-size: 2rem; margin-bottom: 12px; }
+.hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    line-height: 1.3;
+    letter-spacing: -.01em;
+    margin-bottom: 14px;
+}
 .highlight { color: var(--accent); }
-.hero-sub { font-size: 1.05rem; color: var(--muted); margin-bottom: 12px; }
-.hero-desc { margin-bottom: 24px; }
+.hero-sub { font-size: 1.05rem; color: var(--muted); margin-bottom: 10px; }
+.hero-desc { margin-bottom: 28px; }
 
 .btn {
     display: inline-block;
     background: var(--accent);
-    color: #fff;
+    color: #0d1117;
+    font-weight: 600;
     padding: 10px 22px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
-    transition: opacity .2s;
+    transition: transform .15s, filter .15s;
 }
-.btn:hover { opacity: .85; }
+.btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
 
 /* ===== 通用区块 ===== */
-.section { max-width: 900px; margin: 24px auto; padding: 0 24px 40px; }
-.section h2 { margin-bottom: 20px; font-size: 1.4rem; }
+.section { max-width: var(--page); margin: 0 auto; padding: 0 24px 72px; }
+.section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.section h2 { font-size: 1.25rem; }
+.section-note { color: var(--muted); font-size: .88rem; }
 
 /* ===== 项目卡片 ===== */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* 自动换行响应式 */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* 自动换行响应式 */
     gap: 16px;
 }
 .card {
+    display: block;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: var(--radius);
     padding: 18px 20px;
     text-decoration: none;
     color: var(--text);
-    transition: transform .15s, box-shadow .15s;
+    transition: transform .15s, border-color .15s, box-shadow .15s;
 }
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,.5);
+    border-color: #4d5b6b;
+    box-shadow: var(--shadow);
 }
-.card h3 { margin: 8px 0 6px; font-size: 1.05rem; }
-.card p { color: var(--muted); font-size: .92rem; }
+.card h3 { margin: 10px 0 6px; font-size: 1.02rem; }
+.card p { color: var(--muted); font-size: .9rem; }
+
+/* 「还没做」的卡片：虚线边框，一眼看出是空的占位 */
+.card.planned {
+    background: transparent;
+    border-style: dashed;
+}
+.card.planned h3,
+.card.planned p { color: var(--gray); }
+.card.planned:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border);
+}
 
 .badge {
     display: inline-block;
@@ -100,57 +174,109 @@ body {
 .badge.doing { background: var(--green); }
 .badge.todo  { background: var(--gray); }
 
-/* ===== 日志页 ===== */
-.page { max-width: 760px; margin: 30px auto; padding: 0 24px 60px; }
-.page h1 { margin-bottom: 8px; }
-.page-sub { color: var(--muted); margin-bottom: 32px; }
+/* ===== 内页（日志 / 关于我 / 404） ===== */
+.page { max-width: var(--reading); margin: 0 auto; padding: 56px 24px 72px; }
+.page h1 { font-size: clamp(1.6rem, 4.5vw, 2rem); margin-bottom: 8px; }
+.page-sub { color: var(--muted); margin-bottom: 36px; }
 
 .post {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: var(--radius);
     padding: 24px 28px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
-.post-meta { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+}
 .date {
-    font-size: .85rem;
-    color: var(--muted);
-    background: var(--accent-soft);
+    font-size: .8rem;
     color: var(--accent);
+    background: var(--accent-soft);
     padding: 2px 10px;
     border-radius: 999px;
 }
-.tag { font-size: .85rem; color: var(--muted); }
-.post h2 { font-size: 1.3rem; margin-bottom: 14px; }
-.post h3 { font-size: 1.05rem; margin: 18px 0 8px; }
+.tag { font-size: .8rem; color: var(--muted); }
+.post h2 { font-size: 1.2rem; margin-bottom: 12px; }
+.post h3 { font-size: 1rem; margin: 18px 0 8px; }
+/* 段落后面接小标题时，给它留出呼吸的空间 */
+.post p + h2,
+.post ul + h2 { margin-top: 26px; }
 .post p, .post li { margin-bottom: 8px; }
 .post ul { padding-left: 22px; margin-bottom: 8px; }
 .post code {
     background: #21262d;
     padding: 2px 6px;
     border-radius: 4px;
-    font-family: Consolas, monospace;
+    font-family: var(--mono);
     font-size: .9em;
 }
 .post a { color: var(--accent); }
 
 /* ===== 评论区 ===== */
-.comments { margin-top: 40px; }
-.comments h2 { margin-bottom: 16px; }
+.comments { margin-top: 48px; }
+.comments h2 { font-size: 1.2rem; margin-bottom: 16px; }
+/* 备用样式：还没接 giscus 时可以用它占位 */
 .comments-hint {
     color: var(--muted);
     background: var(--card);
     border: 1px dashed var(--border);
-    border-radius: 12px;
+    border-radius: var(--radius);
     padding: 20px;
     text-align: center;
 }
 
+/* ===== 404 页 ===== */
+.error {
+    max-width: var(--reading);
+    margin: 0 auto;
+    padding: 96px 24px;
+    text-align: center;
+}
+.error .code {
+    font-size: clamp(3rem, 12vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+.error h1 { font-size: 1.3rem; margin-bottom: 10px; }
+.error p { color: var(--muted); margin-bottom: 28px; }
+
 /* ===== 页脚 ===== */
 .footer {
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+}
+.footer p {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 26px 24px 34px;
     text-align: center;
     color: var(--muted);
     font-size: .85rem;
-    padding: 30px 0 40px;
+}
+
+/* ===== 手机等窄屏：缩小留白，避免导航挤成一团 ===== */
+@media (max-width: 560px) {
+    .nav-inner { padding: 10px 16px; gap: 8px; }
+    .nav-logo { font-size: .98rem; }
+    .nav-links { gap: 0; }
+    .nav-links a { padding: 6px 8px; font-size: .92rem; }
+
+    .hero { padding: 48px 16px 40px; }
+    .section { padding: 0 16px 56px; }
+    .page { padding: 40px 16px 56px; }
+    .post { padding: 20px 18px; }
+    .error { padding: 64px 16px; }
+}
+
+/* 系统开了「减少动画」就别动来动去 */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
 }

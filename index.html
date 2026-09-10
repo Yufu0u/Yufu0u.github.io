@@ -2,82 +2,94 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yufu0u 的学习小站</title>
+    <meta name="description" content="Yufu0u 的个人学习小站：记录每周学习日志、踩坑笔记和正在做的小项目。">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+
+    <!-- 分享到微信/GitHub 时的预览信息 -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yufu0u.dev">
+    <meta property="og:title" content="Yufu0u 的学习小站">
+    <meta property="og:description" content="记录每周学习日志、踩坑笔记和正在做的小项目。">
+    <meta property="og:url" content="https://yufu0u.github.io/">
+    <meta name="twitter:card" content="summary">
 </head>
 <body>
 
+    <!-- 键盘 Tab 时第一个出现的链接 -->
+    <a class="skip-link" href="#main">跳到正文</a>
+
     <!-- ===== 顶部导航栏 ===== -->
     <nav class="nav">
-        <a href="index.html" class="nav-logo">Yufu0u.dev</a>
-        <div class="nav-links">
-            <a href="index.html" class="active">首页</a>
-            <a href="blog.html">日志</a>
-            <a href="about.html">关于我</a>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Yufu0u.dev</a>
+            <div class="nav-links">
+                <a href="index.html" class="active" aria-current="page">首页</a>
+                <a href="blog.html">日志</a>
+                <a href="about.html">关于我</a>
+            </div>
         </div>
     </nav>
 
-    <!-- ===== 主视觉区===== -->
-    <header class="hero">
-        <h1> <span class="highlight">Yufu0u</span> </h1>
-        <p class="hero-sub">
-            一个普通人......
-        </p>
-        <p class="hero-desc">
-          记录学习过程
-        </p>
-  
-        <a class="btn" href="https://github.com/Yufu0u">GitHub 主页 →</a>
-    </header>
+    <main id="main">
 
-    <!-- ===== 项目导航卡片 ===== -->
-    <section class="section">
-        <h2>我</h2>
-        <div class="cards">
+        <!-- ===== 主视觉区 ===== -->
+        <header class="hero">
+            <h1>你好，我是 <span class="highlight">Yufu0u</span></h1>
+            <p class="hero-sub">一个普通人……</p>
+            <p class="hero-desc">在这里记录我的学习过程。</p>
+            <a class="btn" href="https://github.com/Yufu0u">GitHub 主页 →</a>
+        </header>
 
-            <a class="card" href="blog.html">
-                <span class="badge doing">进行中</span>
-                <h3>日志</h3>
-                <p>学习计划、进度打卡</p>
-            </a>
+        <!-- ===== 在做的事 ===== -->
+        <section class="section">
+            <div class="section-head">
+                <h2>在做的事</h2>
+                <span class="section-note">想到新的就加进来</span>
+            </div>
 
-            <a class="card" href="index.html">
-                <span class="badge doing">进行中</span>
-                <h3>个人网站</h3>
-                <p>就是你正在看的这个网站</p>
-            </a>
+            <div class="cards">
 
-            <a class="card" href="#">
-                <span class="badge todo">规划中</span>
-                <h3></h3>
-                <p></p>
-            </a>
+                <a class="card" href="blog.html">
+                    <span class="badge doing">进行中</span>
+                    <h3>学习日志</h3>
+                    <p>每周一篇，记录计划、进度和踩过的坑。</p>
+                </a>
 
-            <a class="card" href="#">
-                <span class="badge todo">规划中</span>
-                <h3></h3>
-                <p></p>
-            </a>
+                <a class="card" href="https://github.com/Yufu0u/Yufu0u.github.io">
+                    <span class="badge doing">进行中</span>
+                    <h3>个人网站</h3>
+                    <p>就是你正在看的这个网站，手写 HTML / CSS。</p>
+                </a>
 
-            <a class="card" href="#">
-                <span class="badge todo">规划中</span>
-                <h3></h3>
-                <p></p>
-            </a>
+                <div class="card planned">
+                    <span class="badge todo">规划中</span>
+                    <h3>＋ 空位</h3>
+                    <p>下一个项目的位置，还没想好。</p>
+                </div>
 
-            <a class="card" href="#">
-                <span class="badge todo">规划中</span>
-                <h3></h3>
-                <p> </p>
-            </a>
+                <div class="card planned">
+                    <span class="badge todo">规划中</span>
+                    <h3>＋ 空位</h3>
+                    <p>下一个项目的位置，还没想好。</p>
+                </div>
 
-        </div>
-    </section>
+                <div class="card planned">
+                    <span class="badge todo">规划中</span>
+                    <h3>＋ 空位</h3>
+                    <p>下一个项目的位置，还没想好。</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
 
     <footer class="footer">
-        <p>由 GitHub Pages 托管 · 用 HTML/CSS 手写 · 评论功能来自 giscus</p>
+        <p>由 GitHub Pages 托管 · 用 HTML / CSS 手写</p>
     </footer>
 
 </body>
