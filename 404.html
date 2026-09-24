@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<!-- 404 页面：访问不存在的地址时 GitHub Pages 会自动使用这个文件 -->
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面走丢了 | Yufu0u</title>
-    <meta name="description" content="这个地址不存在，回到首页继续逛吧。">
+    <title>页面走丢了 | Yufu0u.dev</title>
+    <meta name="description" content="这个地址不存在，回到首页继续浏览学习手记。">
     <meta name="robots" content="noindex">
-
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav class="nav">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <nav class="nav" aria-label="主导航">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">Yufu0u.dev</a>
             <div class="nav-links">
@@ -23,19 +21,15 @@
             </div>
         </div>
     </nav>
-
     <main id="main">
         <div class="error">
             <p class="code">404</p>
+            <p class="eyebrow">PAGE NOT FOUND</p>
             <h1>这个页面走丢了</h1>
             <p>链接可能拼错了，或者它还没被写出来。</p>
-            <a class="btn" href="index.html">回到首页</a>
+            <a class="btn" href="index.html">回到首页 <span aria-hidden="true">→</span></a>
         </div>
     </main>
-
-    <footer class="footer">
-        <p>由 GitHub Pages 托管 · 用 HTML / CSS 手写</p>
-    </footer>
-
+    <footer class="footer"><p>Yufu0u.dev <span aria-hidden="true">·</span> GitHub Pages <span aria-hidden="true">·</span> HTML / CSS / JS</p></footer>
 </body>
 </html>

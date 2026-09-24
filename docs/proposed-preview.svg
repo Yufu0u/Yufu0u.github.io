@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+  <title id="title">规划中的首页与日志目录结构示意</title>
+  <desc id="desc">左侧首页突出自我介绍、最近日志和两个真实项目。右侧日志目录提供搜索、年份筛选、摘要列表及分页，点击标题进入独立文章。</desc>
+  <rect width="1200" height="790" fill="#080d17"/>
+  <text x="32" y="42" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="23" font-weight="700">更新后 · 结构预览</text>
+  <text x="32" y="68" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">建议方向：学习手记、清晰目录、真实内容；视觉和文案待实施时细化</text>
+
+  <rect x="28" y="94" width="555" height="664" rx="16" fill="#0b1020" stroke="#33445b"/>
+  <rect x="28" y="94" width="555" height="51" rx="16" fill="#121a2b"/>
+  <rect x="28" y="127" width="555" height="18" fill="#121a2b"/>
+  <line x1="28" y1="145" x2="583" y2="145" stroke="#33445b"/>
+  <rect x="49" y="111" width="9" height="18" rx="3" fill="#7dd3fc"/>
+  <text x="69" y="128" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="17" font-weight="700">Yufu0u / 学习手记</text>
+  <text x="363" y="126" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">首页</text>
+  <text x="417" y="126" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">日志</text>
+  <text x="471" y="126" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">关于我</text>
+  <text x="50" y="194" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="700" letter-spacing="2">LEARNING NOTES  /  2026</text>
+  <text x="50" y="240" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="31" font-weight="700">把学过的，慢慢写清楚。</text>
+  <text x="50" y="272" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="14">记录学习、试验和遇到的问题。</text>
+  <text x="50" y="295" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="14">一篇一篇积累，也方便回头查找。</text>
+  <rect x="50" y="315" width="133" height="40" rx="8" fill="#7dd3fc"/>
+  <text x="69" y="341" fill="#0b1020" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700">浏览学习日志 →</text>
+  <text x="50" y="405" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="21" font-weight="700">最近日志</text>
+  <text x="465" y="404" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">查看全部 →</text>
+  <line x1="50" y1="420" x2="560" y2="420" stroke="#33445b"/>
+  <text x="51" y="449" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">09.06</text>
+  <text x="119" y="449" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="15">赛博果蝇</text>
+  <text x="537" y="449" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="17">↗</text>
+  <line x1="50" y1="465" x2="560" y2="465" stroke="#25364a"/>
+  <text x="51" y="494" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">09.06</text>
+  <text x="119" y="494" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="15">试了试 GPT-6</text>
+  <text x="537" y="494" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="17">↗</text>
+  <line x1="50" y1="510" x2="560" y2="510" stroke="#25364a"/>
+  <text x="51" y="539" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">08.30</text>
+  <text x="119" y="539" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="15">SSH 连不上，原来是用户名写错了</text>
+  <text x="537" y="539" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="17">↗</text>
+  <line x1="50" y1="555" x2="560" y2="555" stroke="#33445b"/>
+  <text x="50" y="605" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="21" font-weight="700">在做的事</text>
+  <rect x="50" y="622" width="245" height="82" rx="10" fill="#121a2b" stroke="#33445b"/>
+  <rect x="309" y="622" width="245" height="82" rx="10" fill="#121a2b" stroke="#33445b"/>
+  <text x="67" y="655" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="16" font-weight="700">学习日志</text>
+  <text x="326" y="655" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="16" font-weight="700">个人网站</text>
+  <text x="67" y="681" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">持续记录</text>
+  <text x="326" y="681" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">正在维护</text>
+  <text x="50" y="738" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">首页 · 只展示真实内容</text>
+
+  <rect x="617" y="94" width="555" height="664" rx="16" fill="#0b1020" stroke="#33445b"/>
+  <rect x="617" y="94" width="555" height="51" rx="16" fill="#121a2b"/>
+  <rect x="617" y="127" width="555" height="18" fill="#121a2b"/>
+  <line x1="617" y1="145" x2="1172" y2="145" stroke="#33445b"/>
+  <rect x="638" y="111" width="9" height="18" rx="3" fill="#7dd3fc"/>
+  <text x="658" y="128" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="17" font-weight="700">Yufu0u / 学习手记</text>
+  <text x="952" y="126" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">首页</text>
+  <text x="1006" y="126" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">日志</text>
+  <text x="1060" y="126" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">关于我</text>
+  <text x="640" y="196" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="700" letter-spacing="2">ARCHIVE  /  学习记录</text>
+  <text x="640" y="236" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="30" font-weight="700">学习日志</text>
+  <text x="640" y="264" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="14">按时间整理，也能直接搜索早期记录。</text>
+  <rect x="640" y="291" width="354" height="42" rx="8" fill="#121a2b" stroke="#42566e"/>
+  <text x="655" y="318" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="14">搜索标题或摘要…</text>
+  <rect x="1005" y="291" width="144" height="42" rx="8" fill="#121a2b" stroke="#42566e"/>
+  <text x="1021" y="318" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="14">全部年份  ▾</text>
+  <text x="640" y="358" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">共 3 篇 · 默认最新在前</text>
+  <line x1="640" y1="373" x2="1149" y2="373" stroke="#33445b"/>
+  <text x="640" y="401" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">2026-09-06</text>
+  <text x="640" y="429" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="18" font-weight="700">赛博果蝇  →</text>
+  <text x="640" y="452" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">在电脑养了赛博果蝇</text>
+  <line x1="640" y1="469" x2="1149" y2="469" stroke="#25364a"/>
+  <text x="640" y="497" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">2026-09-06</text>
+  <text x="640" y="525" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="18" font-weight="700">试了试 GPT-6  →</text>
+  <text x="640" y="548" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">试了试 GPT-6，AI 的进化速度真可怕……</text>
+  <line x1="640" y1="565" x2="1149" y2="565" stroke="#25364a"/>
+  <text x="640" y="593" fill="#7dd3fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">2026-08-30</text>
+  <text x="640" y="621" fill="#edf4fc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="18" font-weight="700">SSH 连不上，原来是用户名写错了  →</text>
+  <text x="640" y="644" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">接 SSH 时遇到 Permission denied……</text>
+  <line x1="640" y1="661" x2="1149" y2="661" stroke="#33445b"/>
+  <text x="640" y="696" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">第 1 / 1 页</text>
+  <rect x="952" y="675" width="89" height="32" rx="7" fill="#121a2b" stroke="#33445b"/>
+  <rect x="1051" y="675" width="98" height="32" rx="7" fill="#121a2b" stroke="#33445b"/>
+  <text x="969" y="696" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">上一页</text>
+  <text x="1069" y="696" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12">下一页</text>
+  <text x="640" y="738" fill="#9ba9bc" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13">日志目录 · 点击标题进入独立文章与评论</text>
+</svg>

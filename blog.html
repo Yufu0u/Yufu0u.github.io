@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<!-- 学习日志页：每周日在最上面加一篇文章，往下越旧 -->
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学习日志 | Yufu0u</title>
-    <meta name="description" content="Yufu0u 的每周学习日志：学习计划、进度打卡和踩坑记录，最新的在最上面。">
-
+    <title>学习日志 | Yufu0u.dev</title>
+    <meta name="description" content="浏览 Yufu0u 的学习记录，可按年份筛选或搜索标题与摘要。">
+    <link rel="canonical" href="https://yufu0u.github.io/blog.html">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
-
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Yufu0u.dev">
-    <meta property="og:title" content="学习日志 | Yufu0u">
-    <meta property="og:description" content="每周一篇，记录学习计划、进度和踩过的坑。">
+    <meta property="og:title" content="学习日志 | Yufu0u.dev">
+    <meta property="og:description" content="浏览学习记录，可按年份筛选或搜索标题与摘要。">
     <meta property="og:url" content="https://yufu0u.github.io/blog.html">
     <meta name="twitter:card" content="summary">
 </head>
 <body>
-
     <a class="skip-link" href="#main">跳到正文</a>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="主导航">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">Yufu0u.dev</a>
             <div class="nav-links">
@@ -33,54 +30,64 @@
     </nav>
 
     <main id="main">
-        <div class="page">
-            <h1>学习日志</h1>
-            <p class="page-sub">每周一篇，最新的在最上面。</p>
+        <div class="page archive-page">
+            <header class="page-heading">
+                <p class="eyebrow">ARCHIVE <span aria-hidden="true">/</span> 学习记录</p>
+                <h1>学习日志</h1>
+                <p class="page-sub">按时间整理，也可以直接搜索以前的记录。</p>
+            </header>
 
-            <!-- ===== 文章模板：新的一篇复制这一段，放到最上面 =====
-            <article class="post">
-                <div class="post-meta">
-                    <span class="date">2026-XX-XX</span>
-                    <span class="tag">第 N 周</span>
+            <form class="archive-controls" id="archive-filters" role="search" hidden>
+                <div class="field search-field">
+                    <label for="archive-search">搜索日志</label>
+                    <input id="archive-search" name="q" type="search" placeholder="输入标题或摘要关键词" autocomplete="off">
                 </div>
-                <h2>文章标题</h2>
-                <p>正文……</p>
-                <h3>小标题</h3>
-                <ul><li>要点</li></ul>
-            </article>
-            ================================================================ -->
-
-            <!-- 最新的一篇放最上面 -->
-              <article class="post">
-                <div class="post-meta">
-                    <span class="date">2026-09-06</span>
-                    <span class="tag">第 1 周</span>
+                <div class="field year-field">
+                    <label for="archive-year">按年份筛选</label>
+                    <select id="archive-year" name="year">
+                        <option value="all">全部年份</option>
+                    </select>
                 </div>
-                <h2>赛博果蝇</h2>
-                <p>在电脑养了赛博果蝇</p>
-            </article>
+            </form>
 
-            <article class="post">
-                <div class="post-meta">
-                    <span class="date">2026-09-06</span>
-                    <span class="tag">第 1 周</span>
-                </div>
-                <h2>试了试 GPT-6</h2>
-                <p>试了试 GPT-6，AI 的进化速度真可怕……</p>
-            </article>
+            <p class="archive-fallback" id="archive-fallback">完整目录如下，选择标题即可阅读文章。</p>
+            <p class="archive-status" id="archive-status" aria-live="polite">日志按日期从新到旧排列。</p>
+            <p class="archive-empty" id="archive-empty" hidden>没有找到符合条件的日志，请调整关键词或年份。</p>
 
-            <article class="post">
-                <div class="post-meta">
-                    <span class="date">2026-08-30</span>
-                    <span class="tag">第 0 周</span>
-                </div>
-                <h2>SSH 连不上，原来是用户名写错了</h2>
-                <p>今天接 SSH，一直报 <code>Permission denied</code>，排查半天发现是用户名大小写写错了……</p>
-            </article>
+            <ol class="archive-list" id="archive-list" aria-label="日志目录">
+                <li class="archive-entry" data-year="2026" data-search="赛博果蝇 在电脑养了赛博果蝇">
+                    <article>
+                        <time datetime="2026-09-06">2026-09-06</time>
+                        <h2><a href="posts/2026-09-06-cyber-fruit-fly.html">赛博果蝇 <span aria-hidden="true">→</span></a></h2>
+                        <p>在电脑养了赛博果蝇</p>
+                    </article>
+                </li>
+                <li class="archive-entry" data-year="2026" data-search="试了试 GPT-6 试了试 GPT-6 AI 的进化速度真可怕">
+                    <article>
+                        <time datetime="2026-09-06">2026-09-06</time>
+                        <h2><a href="posts/2026-09-06-gpt-6-first-look.html">试了试 GPT-6 <span aria-hidden="true">→</span></a></h2>
+                        <p>试了试 GPT-6，AI 的进化速度真可怕……</p>
+                    </article>
+                </li>
+                <li class="archive-entry" data-year="2026" data-search="SSH 连不上 原来是用户名写错了 Permission denied 接 SSH 用户名 大小写">
+                    <article>
+                        <time datetime="2026-08-30">2026-08-30</time>
+                        <h2><a href="posts/2026-08-30-ssh-username-case.html">SSH 连不上，原来是用户名写错了 <span aria-hidden="true">→</span></a></h2>
+                        <p>接 SSH 时遇到 Permission denied，排查后发现是用户名大小写写错了。</p>
+                    </article>
+                </li>
+            </ol>
 
-            <div class="comments">
-                <h2>留言板</h2>
-                <!-- giscus -->
+            <nav class="pagination" id="archive-pagination" aria-label="日志分页" hidden>
+                <button class="page-button" id="page-previous" type="button">← 上一页</button>
+                <span id="page-indicator" aria-live="polite">第 1 / 1 页</span>
+                <button class="page-button" id="page-next" type="button">下一页 →</button>
+            </nav>
+
+            <section class="legacy-discussion" id="legacy-discussion" aria-labelledby="legacy-heading">
+                <p class="eyebrow">DISCUSSION</p>
+                <h2 id="legacy-heading">日志页留言板</h2>
+                <p>这是日志目录原有的留言入口，保留在原地址，方便查看这里的历史讨论。</p>
                 <script src="https://giscus.app/client.js"
                         data-repo="Yufu0u/Yufu0u.github.io"
                         data-repo-id="R_kgDOUIkBjw"
@@ -96,13 +103,13 @@
                         crossorigin="anonymous"
                         async>
                 </script>
-            </div>
+            </section>
         </div>
     </main>
 
     <footer class="footer">
-        <p>由 GitHub Pages 托管 · 用 HTML / CSS 手写 · 评论来自 giscus</p>
+        <p>Yufu0u.dev <span aria-hidden="true">·</span> GitHub Pages <span aria-hidden="true">·</span> HTML / CSS / JS</p>
     </footer>
-
+    <script src="archive.js" defer></script>
 </body>
 </html>
